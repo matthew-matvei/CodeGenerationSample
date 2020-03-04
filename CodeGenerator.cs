@@ -56,6 +56,8 @@ namespace CodeGenerationSample
                 textWriter,
                 new CodeGeneratorOptions()
             );
+
+            textWriter.Close();
         }
 
         public static CompilerResults CompileCode(

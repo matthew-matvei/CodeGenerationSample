@@ -47,8 +47,8 @@ namespace CodeGenerationSample
             CodeCompileUnit unit)
         {
             using var textWriter = new IndentedTextWriter(
-                new StreamWriter(sourceFileName, append: false)
-                , "   "
+                new StreamWriter(sourceFileName, append: false),
+                "   "
             );
 
             provider.GenerateCodeFromCompileUnit(

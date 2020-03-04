@@ -59,25 +59,5 @@ namespace CodeGenerationSample
 
             textWriter.Close();
         }
-
-        public static CompilerResults CompileCode(
-            CodeDomProvider provider,
-            string sourceFile,
-            string exeFile)
-        {
-            var referenceAssemblies = new[] { "System.dll" };
-            var compilerParameters = new CompilerParameters(
-                referenceAssemblies,
-                exeFile,
-                includeDebugInformation: false)
-            {
-                GenerateExecutable = true
-            };
-
-            return provider.CompileAssemblyFromFile(
-                compilerParameters,
-                sourceFile
-            );
-        }
     }
 }

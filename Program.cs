@@ -3,9 +3,9 @@ using System.CodeDom.Compiler;
 
 namespace CodeGenerationSample
 {
-    class Program
+    public static class Program
     {
-        static void Main(string[] args)
+        public static void Main()
         {
             var unit = CodeGenerator.BuildCode();
             var codeDomProvider = CodeDomProvider.CreateProvider("CSharp");
